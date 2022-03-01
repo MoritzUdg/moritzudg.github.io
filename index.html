@@ -21,6 +21,7 @@ ax=ay=15;
 xv=yv=0;
 trail=[];
 tail = 5;
+var highscore = score;
 function game() {
     px+=xv;
     py+=yv;
@@ -63,12 +64,8 @@ function game() {
     ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
 
     var score = tail - 5;
-    var highscore = score;
-    if (highscore = score) {
+    if (highscore <= score) {
         highscore = score;
-    }
-    else {
-        highscore = 15;
     }
     
     const count = document.getElementById("count");
