@@ -21,6 +21,7 @@ ax=ay=15;
 xv=yv=0;
 trail=[];
 tail = 5;
+var highscore = 0;
 function game() {
     px+=xv;
     py+=yv;
@@ -63,17 +64,17 @@ function game() {
     ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
 
     var score = tail - 5;
-    var highscore = score;
-    if (highscore = score) {
-        highscore = score;
+    if (document.cookie > 0) {
+        highscore = document.cookie;
     }
-    else {
-        highscore = 15;
+    if (highscore <= score) {
+        highscore = score;
     }
     
     const count = document.getElementById("count");
     count.innerHTML = "Dein Score: " + score;
 
+    document.cookie = highscore;
     const highscoreDiv = document.getElementById("highscore");
     highscoreDiv.innerHTML = "Dein Highscore: " + highscore;
 }
