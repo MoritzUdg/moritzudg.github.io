@@ -1,7 +1,7 @@
 <head>
-	<title>Luca die Schlange</title>
+	<title>Schlange</title>
 	<link rel="stylesheet" href="main.css">
-	<link rel="shortcut icon" sizes="32x32" href="luca.jpg">
+	//<link rel="shortcut icon" sizes="32x32" href="luca.jpg">
 </head>
 <body>
 <canvas id="gc" width="400" height="400"></canvas>
@@ -37,10 +37,11 @@ function game() {
     if(py>tc-1) {
         py= 0;
     }
-    var img = new Image();
-    img.src = 'luca.jpg';
-    var pattern = ctx.createPattern(img, 'repeat');
-    ctx.fillStyle = pattern;
+    //var img = new Image();
+    //img.src = 'luca.jpg';
+    //var pattern = ctx.createPattern(img, 'repeat');
+    //ctx.fillStyle = pattern;
+    ctx.fillStyle = "black";
     ctx.fillRect(0,0,canv.width,canv.height);
  
     ctx.fillStyle="orange";
