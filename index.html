@@ -37,11 +37,10 @@ function game() {
     if(py>tc-1) {
         py= 0;
     }
-    //var img = new Image();
-    //img.src = 'luca.jpg';
-    //var pattern = ctx.createPattern(img, 'repeat');
-    //ctx.fillStyle = pattern;
-    ctx.fillStyle = "black";
+    var img = new Image();
+    img.src = 'luca.jpg';
+    var pattern = ctx.createPattern(img, 'repeat');
+    ctx.fillStyle = pattern;
     ctx.fillRect(0,0,canv.width,canv.height);
  
     ctx.fillStyle="orange";
@@ -90,7 +89,7 @@ function keyPush(evt) {
         case 39:
             xv=1;yv=0;
             break;
-        case 40:
+        case 40;
             xv=0;yv=1;
             break;
     }
