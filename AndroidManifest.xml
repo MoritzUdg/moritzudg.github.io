@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example" >
+    <application
+      <!-- other Activities goes here -->
+        <activity
+            android:name=".ProxyActivity"
+            android:label="Some nice label"
+            android:noHistory="true"
+            android:theme="@android:style/Theme.NoDisplay">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http"
+                    android:host="mywebsite.pl"/>
+                <data
+                    android:scheme="http"
+                    android:host="www.mywebsite.pl"/>
+            </intent-filter>
+
+        </activity>
+    </application>
+
+</manifest>
