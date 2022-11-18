@@ -1,7 +1,7 @@
 <head>
 	<title>Schlange</title>
 	<link rel="stylesheet" href="main.css">
-	//<link rel="shortcut icon" sizes="32x32" href="luca.jpg">
+	<link rel="shortcut icon" sizes="32x32" href="marius.jpg">
 </head>
 <body>
 <canvas id="gc" width="400" height="400"></canvas>
@@ -38,12 +38,12 @@ function game() {
         py= 0;
     }
     var img = new Image();
-    img.src = 'luca.jpg';
+    img.src = 'marius.jpg';
     var pattern = ctx.createPattern(img, 'repeat');
     ctx.fillStyle = pattern;
     ctx.fillRect(0,0,canv.width,canv.height);
  
-    ctx.fillStyle="orange";
+    ctx.fillStyle="red";
     for(var i=0;i<trail.length;i++) {
         ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
         if(trail[i].x==px && trail[i].y==py) {
@@ -60,7 +60,7 @@ function game() {
         ax=Math.floor(Math.random()*tc);
         ay=Math.floor(Math.random()*tc);
     }
-    ctx.fillStyle = "blue";
+    ctx.fillStyle = "black";
     ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
 
     var score = tail - 5;
